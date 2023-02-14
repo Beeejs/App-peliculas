@@ -12,7 +12,8 @@ module.exports = {
         blackSemi:'#010101'
       },
       fontFamily:{
-        montserrat:'Montserrat'
+        montserrat:'Montserrat',
+        unbounded:'Unbounded'
       }
     },
   },
