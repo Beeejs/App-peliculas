@@ -14,6 +14,15 @@ module.exports = {
       fontFamily:{
         montserrat:'Montserrat',
         unbounded:'Unbounded'
+      },
+      screens:{
+        'mobile': {'max':'480px'},
+        'tablet': {'max':'640px'},
+        'notebookS': {'max':'1024px'},
+        'notebook': {'max':'1280px'},
+        'desktopMF': {'min':'1400px'},
+        'desktopS': {'max':'1400px'},
+        'desktop': {'max':'1650px'},
       }
     },
   },

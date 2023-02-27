@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
+import SpinnerLoad from './SpinnerLoad';
 
 function ModalVideo({data}) {
   const [show, setShow] = useState(false);
@@ -15,14 +16,26 @@ function ModalVideo({data}) {
     return videos ? videos.results.find(video => video.type === 'Trailer') : null
   }
 
+  const imgMovie = () =>{
+    if(poster_path){
+      return (
+        <div className='desktopS:w-[400px] notebook:!w-[500px] w-[500px] bg-[#1a1a1a] p-5 backdrop-opacity-1 cursor-pointer' onClick={() => setShow(true)}>
+          <img className='w-full drop-shadow-[0_25px_35px_rgba(0,0,0,0.8)]' src={`${(poster_path ? IMG_PATH : undefined) + poster_path}`} alt={`IMG-${title}`}/>
+        </div>
+      )
+    }else{
+      return <SpinnerLoad/>
+    }
+  }
+
 
   return (
     <>
-      {
-        <div className='w-[500px] bg-[#1a1a1a] p-5 backdrop-opacity-1 cursor-pointer' onClick={() => setShow(true)}>
-          <img className='w-[500px] drop-shadow-[0_25px_35px_rgba(0,0,0,0.8)]' src={IMG_PATH + poster_path} alt={`IMG-${title}`}/>
-        </div>
-      }
+  
+     {
+      imgMovie()
+     }
+
 
       <Modal
         show={show}
