@@ -6,7 +6,7 @@ import { ThemeContext } from '../context/contextTheme'
 import noCharge from './no-carga.png'
 
 
-const Movies = ({data,collection}) => {
+const Movies = ({data}) => {
   const {theme} = useContext(ThemeContext)
   const {listMovies,deleteFavoriteMovie,addFavoriteMovie} = useContext(FavoritesContext)
   const navigate = useNavigate()
@@ -19,9 +19,9 @@ const Movies = ({data,collection}) => {
   }
 
   return (
-    <div className={`w-[300px] ${theme === 'light' ? 'bg-[#1a1a1a]' : 'bg-whiteTnue'} !p-4 !my-10 !mx-[50px] rounded-3xl cursor-pointer hover:scale-105 hover:bg-transparent duration-200 ease`} id='element-movie'> 
-      <div className='w-full h-16 text-center'>
-        <h1 className={`!text-[20px] ${theme === 'light' ? 'text-whiteTnue' : 'text-backNt'} !m-5 !font-montserrat`}>{title}</h1>
+    <div className={`mobile:mx-[25px] mobileM:!px-0 mobileM:!mx-[10px]  w-[300px] ${theme === 'light' ? 'bg-[#1a1a1a]' : 'bg-[#b5b5b5]'} !p-4 !my-10 mx-[50px] rounded-3xl cursor-pointer hover:scale-105 hover:bg-transparent duration-200 ease`} id='element-movie'> 
+      <div className='tablet:h-24 w-full h-16 text-center'>
+        <h1 className={`!text-[20px] ${theme === 'light' ? 'text-whiteTnue' : 'text-backNt font-extrabold'} !m-5 !font-montserrat`}>{title}</h1>
       </div> 
       <div className='flex justify-center items-center' onClick={handleClick}>
         <img className='tablet:w-[200px] tablet:h-[300px] w-[250px] h-[400px] border-4 border-redNt' src={poster_path ? IMG_PATH + poster_path : noCharge} alt={'IMG -' + title} />

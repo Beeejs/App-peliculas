@@ -16,6 +16,7 @@ module.exports = {
         unbounded:'Unbounded'
       },
       screens:{
+        'mobileM': {'max':'375px'},
         'mobile': {'max':'480px'},
         'tablet': {'max':'640px'},
         'notebookS': {'max':'1024px'},

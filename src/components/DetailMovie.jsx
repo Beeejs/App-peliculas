@@ -57,7 +57,7 @@ const DetailMovie = () => {
             <h1 className='font-montserrat font-extrabold text-white text-center mb-10'>{title}</h1>
             <h3 className='font-unbounded text-redNt text-2xl'>Fecha de lanzamiento: {release_date}</h3>
             <p className='text-white font-montserrat text-lg'>{overview}</p>
-            <h4 className='font-unbounded text-redNt text-2xl font-semibold bg-white w-fit p-2 my-4 rounded-sm'>{adult ? '+18' : 'ATP'}</h4>
+            <h4 className='font-unbounded text-redNt text-2xl font-semibold text-uppercase bg-white w-fit p-2 my-4 rounded-sm'>{adult ? '+18' : 'ATP'}</h4>
             <div className='tablet:flex-wrap flex items-center justify-start gap-3 my-4'>
               {
                 genres ? genres.map(generos =>{

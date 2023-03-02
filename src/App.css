@@ -73,8 +73,21 @@ body{
 }
 
 
-/* @media (max-width:1064px){
-  .slick-dots{
-    display: none !important ;
-  }
-} */
+
+.div-mobile::-webkit-scrollbar {
+  width: 12px;
+}
+
+.div-mobile{
+  overflow-x: hidden !important
+}
+
+.div-mobile::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.div-mobile::-webkit-scrollbar-thumb {
+  background-color: #141414;
+  border-radius: 20px;
+  border: 1px solid #dc1a27;
+}
