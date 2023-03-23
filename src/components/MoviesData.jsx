@@ -100,7 +100,7 @@ const MoviesData = () => {
           <SpinnerLoad/>
         ):
         <div className='flex items-center justify-center h-screen'>
-          <h1 className='notebookS:text-center text-[20px] text-white !m-5 font-montserrat font-bold'>No se encuentra disponible la pelicula que buscas o no existe<span> </span><i className="fa-regular fa-face-frown"></i></h1>
+          <h1 className={`notebookS:text-center text-[20px] ${theme === 'light' ? 'text-white' : 'text-backNt font-extrabold'} !m-5 font-montserrat font-bold`}>No se encuentra disponible la pelicula que buscas o no existe<span> </span><i className="fa-regular fa-face-frown"></i></h1>
         </div>
 
       }

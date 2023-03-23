@@ -13,8 +13,8 @@ const Navbar = () => {
 
   return (
     <div className={`flex justify-between items-center p-5 ${condition ?  null : 'hidden'} ${theme === 'light' ? 'bg-blackSemi' : 'bg-whiteTnue'} duration-200 ease-in-out notebook:flex-col`}>
-      <div className='w-[300px] my-10 mx-5'>
-        <img src="https://image.tmdb.org/t/p/w500/wwemzKWzjKYJFfCeiB57q3r4Bcm.png" alt="IMG-Logo" />
+      <div className='w-[300px] my-10 mx-5 cursor-pointer' onClick={() => {navigate('/')}}>
+        <img src="https://image.tmdb.org/t/p/w500/wwemzKWzjKYJFfCeiB57q3r4Bcm.png" alt="IMG-Logo"/>
       </div>
       <div className={`flex justify-center items-center border-2 ${theme === 'light' ? 'border-whiteTnue' : 'border-blackSemi'} bg-backNt rounded-md notebook:my-10`}>
         <div className='border-r-2 rounded-lg'>

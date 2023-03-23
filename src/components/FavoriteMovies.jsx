@@ -69,7 +69,7 @@ const FavoriteMovies = () => {
               {
                 (filterMovies().length ? null : (
                   <div className='flex items-center justify-center h-screen'>
-                    <h1 className='notebookS:text-center text-[20px] text-white !m-5 font-montserrat font-bold'>No se encuentra en tu lista de favoritos<span> </span><i className="fa-solid fa-heart"></i></h1>
+                    <h1 className={`notebookS:text-center text-[20px] ${theme === 'light' ? 'text-white' : 'text-backNt font-extrabold'} !m-5 font-montserrat font-bold`}>No se encuentra en tu lista de favoritos<span> </span><i className="fa-solid fa-heart"></i></h1>
                   </div>
                 )
                 )
@@ -82,8 +82,8 @@ const FavoriteMovies = () => {
         :
           <div className='flex justify-center items-center h-screen'>
             <div className='text-center'>
-              <h1 className='text-[20px] text-white !m-5 font-montserrat font-bold'>No hay peliculas favoritas<span> </span><i className="fa-regular fa-face-frown"></i></h1>
-              <p className='text-[15px] text-whiteTnue font-unbounded'>Para agregar a tu lista de favoritos, tiene que darle al corazón que está debajo de la película</p>
+              <h1 className={`text-[20px] ${theme === 'light' ? 'text-white' : 'text-backNt font-extrabold'} !m-5 font-montserrat font-bold`}>No hay peliculas favoritas<span> </span><i className="fa-regular fa-face-frown"></i></h1>
+              <p className={`text-[15px] ${theme === 'light' ? 'text-whiteTnue' : 'text-backNt font-extrabold'} font-unbounded`}>Para agregar a tu lista de favoritos, tiene que darle al corazón que está debajo de la película</p>
             </div>
           </div>
       }
